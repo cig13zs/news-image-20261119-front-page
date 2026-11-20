@@ -19,6 +19,11 @@
 //
 // Standard library only. No network. No randomness, no clock, no environment
 // dependence except the output directory.
+//
+// Revision 2: main() reports the format, geometry and byte count it wrote on
+// stdout, so a grading run says exactly what it produced, and the only way it
+// exits non-zero is a real bug in the entry (an image that fails the gate's own
+// byte rules), never a difference between the two runs.
 
 import { readFileSync, writeFileSync, mkdirSync } from 'node:fs';
 import { join } from 'node:path';
